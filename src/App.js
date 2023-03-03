@@ -5,6 +5,7 @@ import Select from "./Select";
 import Input from "./Input";
 import Fieldset from "./Fieldset";
 import Button from "./Button";
+import Form from "./Form";
 
 function App() {
 
@@ -20,14 +21,14 @@ function App() {
             <Header title="Przelicznik walut" />
             <main>
                 <div className="container">
-                    <form className="form">
+                    <Form>
                         <Fieldset
                             title="Wpisz kwotę i walutę"
                             input={<Input />}
                             select={<Select currencies={currencies} />}
                         />
-                        <Button buttonText="Przelicz !"/>
-                    </form>
+                        <Button buttonText="Przelicz !" />
+                    </Form>
                     <Result />
                 </div>
             </main>
