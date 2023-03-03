@@ -1,9 +1,9 @@
+import "./style.css";
 
-
-const Fieldset = ({title, input, select}) => {
+const Fieldset = ({ title, input, select }) => {
     return (
-        <fieldset className="form__fieldset">
-            <legend className="form__legend">
+        <fieldset className="fieldset">
+            <legend className="fieldset__legend">
                 {title}
             </legend>
             {input}

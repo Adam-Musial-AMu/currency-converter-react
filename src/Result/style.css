@@ -1,4 +1,4 @@
-.resume {
+.result {
     color: teal;
     font-size: 1.5em;
     text-align: center;
@@ -9,7 +9,7 @@
     padding: 0px 20px;
 }
 
-.resume__finalResult {
+.result__value {
     color: hsl (180, 100%, 15%);
     font-weight: 700;
 }

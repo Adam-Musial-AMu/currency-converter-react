@@ -1,9 +1,9 @@
+import "./style.css";
 
-
-const Button = ({buttonText}) => {
+const Button = ({ buttonText }) => {
     return (
         <p>
-            <button type="submit" className="form__button form__button--submit">
+            <button type="submit" className="button">
                 {buttonText}
             </button>
         </p>

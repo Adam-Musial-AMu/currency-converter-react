@@ -1,15 +1,15 @@
-
+import "./style.css";
 
 const Input = () => {
     return (
-        <p className="form__paragraph">
-            <label className="form__label">
-                <span className="form__labelText">
+        <p className="input">
+            <label className="input__label">
+                <span className="input__labelText">
                     Kwota w PLN*
                 </span>
-                <input className="form__field" name="amountPln" type="number" min="1" max="1000000"
+                <input className="input__field" name="amountPln" type="number" min="1" max="1000000"
                     value="100" required />
-                <span className="form__unit">
+                <span className="input__unit">
                     PLN
                 </span>
             </label>

@@ -1,0 +1,17 @@
+.button {
+    background-color: teal;
+    color: white;
+    border: darkgreen 2px solid;
+    border-radius: 20px;
+    padding: 10px;
+    font-weight: 700;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: hsl(180, 100%, 30%);
+}
+
+.button:active {
+    background-color: hsl(180, 100%, 35%);
+}

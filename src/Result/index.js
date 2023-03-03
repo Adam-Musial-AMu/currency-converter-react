@@ -2,8 +2,8 @@ import "./style.css";
 
 const Result = () => {
     return (
-        <p className="resume">Kwota, którą otrzymasz to: <span
-            className="resume__finalResult"> N/A</span> PLN netto</p>
+        <p className="result">Kwota, którą otrzymasz to: <span
+            className="result__value"> N/A</span> PLN netto</p>
     )
 };
 
