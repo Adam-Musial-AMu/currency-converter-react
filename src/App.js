@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import Select from "./Select";
 import Input from "./Input";
 import Fieldset from "./Fieldset";
+import Button from "./Button";
 
 function App() {
 
@@ -25,9 +26,7 @@ function App() {
                             input={<Input />}
                             select={<Select currencies={currencies} />}
                         />
-                        <p>
-                            <button type="submit" className="form__button form__button--submit">Przelicz !</button>
-                        </p>
+                        <Button buttonText="Przelicz !"/>
                     </form>
                     <Result />
                 </div>
