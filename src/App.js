@@ -6,6 +6,7 @@ import Input from "./Input";
 import Fieldset from "./Fieldset";
 import Button from "./Button";
 import Form from "./Form";
+import Container from "./Container";
 
 function App() {
 
@@ -19,19 +20,17 @@ function App() {
     return (
         <body className="body">
             <Header title="Przelicznik walut" />
-            <main>
-                <div className="container">
-                    <Form>
-                        <Fieldset
-                            title="Wpisz kwotę i walutę"
-                            input={<Input />}
-                            select={<Select currencies={currencies} />}
-                        />
-                        <Button buttonText="Przelicz !" />
-                    </Form>
-                    <Result />
-                </div>
-            </main>
+            <Container>
+                <Form>
+                    <Fieldset
+                        title="Wpisz kwotę i walutę"
+                        input={<Input />}
+                        select={<Select currencies={currencies} />}
+                    />
+                    <Button buttonText="Przelicz !" />
+                </Form>
+                <Result />
+            </Container>
             <Footer finalText="Dziękuję za skorzystanie z mojego kalkulatora !" />
         </body>
     );
