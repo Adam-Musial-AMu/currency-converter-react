@@ -33,7 +33,7 @@ function App() {
             </Container>
             <Footer finalText="Dziękuję za skorzystanie z mojego kalkulatora !" />
         </body>
-    );
-}
+    )
+};
 
 export default App;
