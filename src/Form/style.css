@@ -20,3 +20,90 @@
     border-radius: 20px;
     padding: 5px 30px;
 }
+
+.form__input {
+    padding: 0px 40px;
+    color: white;
+    font-weight: 700;
+}
+
+.form__inputLabel {
+    padding: 5px;
+}
+
+.form__inputLabelText {
+    max-width: 150px;
+    width: 100%;
+    display: inline-block;
+    margin-right: 5px;
+    padding: 5px;
+    color: teal;
+    font-weight: 700;
+}
+
+.form__inputField {
+    max-width: 200px;
+    width: 100%;
+    border: 2px solid teal;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.form__inputUnit {
+    max-width: 50px;
+    width: 100%;
+    display: inline-block;
+    margin-right: 5px;
+    padding: 5px;
+    color: teal;
+}
+
+.form__select {
+    padding: 0px 40px;
+    color: white;
+    font-weight: 700;
+}
+
+.form__selectLabel {
+    padding: 5px;
+}
+
+.form__selectLabelText {
+    max-width: 150px;
+    width: 100%;
+    display: inline-block;
+    margin-right: 5px;
+    padding: 5px;
+    color: teal;
+    font-weight: 700;
+}
+
+.form__selectField {
+    max-width: 200px;
+    width: 100%;
+    border: 2px solid teal;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.form__selectOption {
+    padding: 20px;
+}
+
+.form__button {
+    background-color: teal;
+    color: white;
+    border: darkgreen 2px solid;
+    border-radius: 20px;
+    padding: 10px;
+    font-weight: 700;
+    width: 100%;
+}
+
+.form__button:hover {
+    background-color: hsl(180, 100%, 30%);
+}
+
+.form__button:active {
+    background-color: hsl(180, 100%, 35%);
+}
