@@ -41,7 +41,6 @@
     font-weight: 700;
 }
 
-
 .form__field {
     max-width: 200px;
     width: 100%;
@@ -49,15 +48,6 @@
     border-radius: 5px;
     padding: 5px;
     box-sizing: inherit;
-}
-
-.form__inputUnit {
-    max-width: 50px;
-    width: 100%;
-    display: inline-block;
-    margin-right: 5px;
-    padding: 5px;
-    color: teal;
 }
 
 .form__button {
