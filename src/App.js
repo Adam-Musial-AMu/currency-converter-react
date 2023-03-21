@@ -20,7 +20,7 @@ function App() {
     }
 
     return (
-        <body className="body">
+        <>
             <Header title="Przelicznik walut" />
             <Form
                 calculateResult={calculateResult}
@@ -29,7 +29,7 @@ function App() {
                 buttonText="Przelicz!"
             />
             <Footer finalText="Dziękuję za skorzystanie z mojego kalkulatora !" />
-        </body>
+        </>
     )
 };
 
