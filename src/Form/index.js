@@ -21,13 +21,13 @@ const Form = ({ calculateResult, result, legendText, buttonText }) => {
                     <legend className="form__legend">
                         {legendText}
                     </legend>
-                    <p className="form__input">
-                        <label className="form__inputLabel">
-                            <span className="form__inputLabelText">
+                    <p className="form__data">
+                        <label className="form__label">
+                            <span className="form__labelText">
                                 Kwota w PLN*
                             </span>
                             <input
-                                className="form__inputField"
+                                className="form__field"
                                 name="amountPln"
                                 type="number"
                                 min="1"
@@ -35,23 +35,24 @@ const Form = ({ calculateResult, result, legendText, buttonText }) => {
                                 value={amount}
                                 onChange={(event) => setAmount(event.target.value)}
                                 required />
-                            <span className="form__inputUnit">
-                                PLN
-                            </span>
                         </label>
                     </p>
-                    <p className="form__select">
-                        <label className="form__selectLabel">
-                            <span className="form__selectLabelText">
+                    <p className="form__data">
+                        <label className="form__label">
+                            <span className="form__labelText">
                                 Waluta*
                             </span>
                             <select
-                                className="form__selectField"
+                                className="form__field"
+                                value={currency}
                                 onChange={({ target }) => setCurrency(target.value)}>
-                                {currencies.map(currency =>
-                                    <option className="form__selectOption" key={currency.id}>
+                                {currencies.map((currency) => (
+                                    <option
+                                        key={currency.symbol}
+                                        value={currency.symbol}>
                                         {currency.name}
-                                    </option>)}
+                                    </option>
+                                ))}
                             </select>
                         </label>
                     </p>
@@ -60,7 +61,7 @@ const Form = ({ calculateResult, result, legendText, buttonText }) => {
                             {buttonText}
                         </button>
                     </p>
-                    <Result />
+                    <Result result={result} />
                 </fieldset>
             </form>
         </main>

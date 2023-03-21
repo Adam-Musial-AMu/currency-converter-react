@@ -21,17 +21,17 @@
     padding: 5px 30px;
 }
 
-.form__input {
+.form__data {
     padding: 0px 40px;
     color: white;
     font-weight: 700;
 }
 
-.form__inputLabel {
+.form__label {
     padding: 5px;
 }
 
-.form__inputLabelText {
+.form__labelText {
     max-width: 150px;
     width: 100%;
     display: inline-block;
@@ -41,12 +41,14 @@
     font-weight: 700;
 }
 
-.form__inputField {
+
+.form__field {
     max-width: 200px;
     width: 100%;
     border: 2px solid teal;
     border-radius: 5px;
     padding: 5px;
+    box-sizing: inherit;
 }
 
 .form__inputUnit {
@@ -56,38 +58,6 @@
     margin-right: 5px;
     padding: 5px;
     color: teal;
-}
-
-.form__select {
-    padding: 0px 40px;
-    color: white;
-    font-weight: 700;
-}
-
-.form__selectLabel {
-    padding: 5px;
-}
-
-.form__selectLabelText {
-    max-width: 150px;
-    width: 100%;
-    display: inline-block;
-    margin-right: 5px;
-    padding: 5px;
-    color: teal;
-    font-weight: 700;
-}
-
-.form__selectField {
-    max-width: 200px;
-    width: 100%;
-    border: 2px solid teal;
-    border-radius: 5px;
-    padding: 5px;
-}
-
-.form__selectOption {
-    padding: 20px;
 }
 
 .form__button {
