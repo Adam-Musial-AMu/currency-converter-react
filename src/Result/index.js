@@ -1,9 +1,16 @@
 import "./style.css";
 
-const Result = () => {
+const Result = ({ result }) => {
     return (
-        <p className="result">Kwota, którą otrzymasz to: <span
-            className="result__value"> N/A</span> PLN netto</p>
+        <p className="result">
+            {!!result && (
+                <>
+                    {result.currencyIn.toFixed(2)}&nbsp;PLN&nbsp;=
+                    {" "}
+                    <strong>{result.currencyOut.toFixed(2)}&nbsp;{result.currency}</strong>
+                </>
+            )}
+        </p>
     )
 };
 
