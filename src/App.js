@@ -5,7 +5,7 @@ import { useState } from "react";
 import { currencies } from "./currencies";
 
 function App() {
-    const [result, setResult] = useState();
+    const [result, setResult] = useState(null);
 
     const calculateResult = (currency, amount) => {
         const rate = currencies.find(({ symbol }) => symbol === currency).rate
@@ -21,14 +21,14 @@ function App() {
 
     return (
         <>
-            <Header title="Przelicznik walut" />
+            <Header />
             <Form
                 calculateResult={calculateResult}
                 result={result}
                 legendText="Wpisz kwotę i walutę"
                 buttonText="Przelicz!"
             />
-            <Footer finalText="Dziękuję za skorzystanie z mojego kalkulatora !" />
+            <Footer />
         </>
     )
 };

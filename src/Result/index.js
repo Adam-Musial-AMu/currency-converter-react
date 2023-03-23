@@ -1,7 +1,6 @@
 import "./style.css";
 
-const Result = ({ result }) => {
-    return (
+const Result = ({ result }) => (
         <p className="result">
             {!!result && (
                 <>
@@ -11,7 +10,6 @@ const Result = ({ result }) => {
                 </>
             )}
         </p>
-    )
-};
+    );
 
 export default Result;

@@ -1,9 +1,9 @@
 import "./style.css";
 
-const Header = ({ title }) => (
+const Header = () => (
     <header>
-        <h1 className="header">{title}</h1>
+        <h1 className="header">Przelicznik walut</h1>
     </header>
-)
+);
 
 export default Header;
