@@ -1,9 +1,10 @@
 import Result from "../Result";
+import Time from "../Time";
 import { currencies } from "../currencies";
 import "./style.css";
 import { useState } from "react";
 
-const Form = ({ calculateResult, result, legendText, buttonText }) => {
+const Form = ({ calculateResult, result, legendText, buttonText, currentDate }) => {
     const [currency, setCurrency] = useState(currencies[0].symbol);
     const [amount, setAmount] = useState("");
 
@@ -21,6 +22,8 @@ const Form = ({ calculateResult, result, legendText, buttonText }) => {
                     <legend className="form__legend">
                         {legendText}
                     </legend>
+                    <Time
+                        currentDate={currentDate} />
                     <p className="form__data">
                         <label className="form__label">
                             <span className="form__labelText">
