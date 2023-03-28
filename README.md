@@ -14,6 +14,8 @@ This is simple Currency Converter app. It was created as a practical exercise in
 - Webpack
 - Babel
 - JavaScript
+- useState
+- useEffect
 - BEM
 - ES6+ features
 - Immutability
