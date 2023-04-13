@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
 import "./style.css";
+import { useCurrentDate } from "./useCurrentDate";
 
 const formatDate = (currentDate) =>
     currentDate.toLocaleString(
@@ -16,14 +16,8 @@ const formatDate = (currentDate) =>
 
 
 const Time = () => {
-    const [currentDate, setCurrentDate] = useState(new Date());
 
-    useEffect(() => {
-        const IntervalId = setInterval(() => {
-            setCurrentDate(new Date());
-        }, 1000);
-        return () => clearInterval(IntervalId);
-    }, []);
+    const currentDate = useCurrentDate();
 
     return (
         <p className="time">
