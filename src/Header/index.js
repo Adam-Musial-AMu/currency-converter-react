@@ -1,8 +1,8 @@
-import "./style.css";
+import { Name } from "./styled";
 
 const Header = () => (
     <header>
-        <h1 className="header">Przelicznik walut</h1>
+        <Name>Przelicznik walut</Name>
     </header>
 );
 

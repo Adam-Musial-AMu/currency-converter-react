@@ -1,7 +1,7 @@
 import Result from "../Result";
 import Time from "../Time";
 import { currencies } from "../currencies";
-import "./style.css";
+import { Area, Fieldset, Legend, Data, Label, Text, Input, Button } from "./styled";
 import { useState } from "react";
 
 const Form = ({ calculateResult, result, legendText, buttonText }) => {
@@ -15,21 +15,19 @@ const Form = ({ calculateResult, result, legendText, buttonText }) => {
 
     return (
         <main>
-            <form
-                className="form"
+            <Area
                 onSubmit={onFormSubmit}>
-                <fieldset className="form__fieldset">
-                    <legend className="form__legend">
+                <Fieldset>
+                    <Legend>
                         {legendText}
-                    </legend>
+                    </Legend>
                     <Time />
-                    <p className="form__data">
-                        <label className="form__label">
-                            <span className="form__labelText">
+                    <Data>
+                        <Label>
+                            <Text>
                                 Kwota w PLN*
-                            </span>
-                            <input
-                                className="form__field"
+                            </Text>
+                            <Input
                                 name="amountPln"
                                 type="number"
                                 min="1"
@@ -37,15 +35,14 @@ const Form = ({ calculateResult, result, legendText, buttonText }) => {
                                 value={amount}
                                 onChange={(event) => setAmount(event.target.value)}
                                 required />
-                        </label>
-                    </p>
-                    <p className="form__data">
-                        <label className="form__label">
-                            <span className="form__labelText">
+                        </Label>
+                    </Data>
+                    <Data>
+                        <Label>
+                            <Text>
                                 Waluta*
-                            </span>
-                            <select
-                                className="form__field"
+                            </Text>
+                            <Input as="select"
                                 value={currency}
                                 onChange={({ target }) => setCurrency(target.value)}>
                                 {currencies.map((currency) => (
@@ -55,17 +52,17 @@ const Form = ({ calculateResult, result, legendText, buttonText }) => {
                                         {currency.name}
                                     </option>
                                 ))}
-                            </select>
-                        </label>
-                    </p>
+                            </Input>
+                        </Label>
+                    </Data>
                     <p>
-                        <button type="submit" className="form__button">
+                        <Button>
                             {buttonText}
-                        </button>
+                        </Button>
                     </p>
                     <Result result={result} />
-                </fieldset>
-            </form>
+                </Fieldset>
+            </Area>
         </main>
     )
 };

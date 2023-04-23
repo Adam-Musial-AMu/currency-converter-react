@@ -1,37 +1,39 @@
-.form {
+import styled from "styled-components";
+
+export const Area = styled.form`
     margin: 30px 0px;
     max-width: 700px;
     margin: 0 auto;
     padding: 0 auto;
-}
+`;
 
-.form__fieldset {
+export const Fieldset = styled.fieldset`
     border: 2px solid teal;
     border-radius: 20px;
     padding: 0 auto;
     box-shadow: 2px 2px 4px hsl(120, 22%, 35%);
     background-color: aliceblue;
     margin: 20px;
-}
+`;
 
-.form__legend {
+export const Legend = styled.legend`
     background-color: teal;
     color: white;
     border-radius: 20px;
     padding: 5px 30px;
-}
+`;
 
-.form__data {
+export const Data = styled.p`
     padding: 0px 40px;
     color: white;
     font-weight: 700;
-}
+`;
 
-.form__label {
+export const Label = styled.label`
     padding: 5px;
-}
+`;
 
-.form__labelText {
+export const Text = styled.span`
     max-width: 150px;
     width: 100%;
     display: inline-block;
@@ -39,18 +41,18 @@
     padding: 5px;
     color: teal;
     font-weight: 700;
-}
+`;
 
-.form__field {
+export const Input = styled.input`
     max-width: 200px;
     width: 100%;
     border: 2px solid teal;
     border-radius: 5px;
     padding: 5px;
     box-sizing: inherit;
-}
+`;
 
-.form__button {
+export const Button = styled.button`
     background-color: teal;
     color: white;
     border: darkgreen 2px solid;
@@ -58,12 +60,12 @@
     padding: 10px;
     font-weight: 700;
     width: 100%;
-}
 
-.form__button:hover {
-    background-color: hsl(180, 100%, 30%);
-}
+    &:hover {
+        background-color: hsl(180, 100%, 30%);
+    }
 
-.form__button:active {
-    background-color: hsl(180, 100%, 35%);
-}
+    &:active {
+        background-color: hsl(180, 100%, 35%);
+    }
+`;

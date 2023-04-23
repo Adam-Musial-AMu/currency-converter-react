@@ -1,4 +1,4 @@
-import "./style.css";
+import { Date } from "./styled";
 import { useCurrentDate } from "./useCurrentDate";
 
 const formatDate = (currentDate) =>
@@ -20,11 +20,11 @@ const Time = () => {
     const currentDate = useCurrentDate();
 
     return (
-        <p className="time">
+        <Date>
             Dzisiaj jest
             {" "}
             {formatDate(currentDate)}
-        </p>
+        </Date>
     )
 };
 

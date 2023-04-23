@@ -1,4 +1,6 @@
-.footer {
+import styled from "styled-components";
+
+export const Termination = styled.footer`
     text-align: center;
     font-size: 20px;
     font-weight: 700;
@@ -8,8 +10,8 @@
     border-radius: 20px;
     box-shadow: 5px 5px 10px 0px hsl(120, 22%, 35%);
     border: 2px solid teal;
-}
+`;
 
-.footer__finalText {
+export const Text = styled.p`
     margin: 0 auto;
-}
+`;

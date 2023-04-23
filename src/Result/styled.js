@@ -1,11 +1,8 @@
-.result {
+import styled from "styled-components";
+
+export const Recalculation = styled.p`
     color: teal;
     font-size: 1.5em;
     text-align: center;
     padding: 0px 20px;
-}
-
-.result__value {
-    color: hsl (180, 100%, 15%);
-    font-weight: 700;
-}
+`;
