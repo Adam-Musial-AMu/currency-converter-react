@@ -1,9 +1,9 @@
-import { Termination, Text } from "./styled";
+import { StyledFooter, Paragraph } from "./styled";
 
 const Footer = () => (
-    <Termination>
-        <Text>Dziękuję za korzystanie z mojego kalkulatora !</Text>
-    </Termination>
+    <StyledFooter>
+        <Paragraph>Dziękuję za korzystanie z mojego kalkulatora !</Paragraph>
+    </StyledFooter>
 )
 
 export default Footer;

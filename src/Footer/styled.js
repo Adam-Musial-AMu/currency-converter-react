@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Termination = styled.footer`
+export const StyledFooter = styled.footer`
     text-align: center;
     font-size: 20px;
     font-weight: 700;
@@ -12,6 +12,6 @@ export const Termination = styled.footer`
     border: 2px solid teal;
 `;
 
-export const Text = styled.p`
+export const Paragraph = styled.p`
     margin: 0 auto;
 `;

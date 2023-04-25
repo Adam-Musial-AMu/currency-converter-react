@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Recalculation = styled.p`
+export const StyledResult = styled.p`
     color: teal;
     font-size: 1.5em;
     text-align: center;

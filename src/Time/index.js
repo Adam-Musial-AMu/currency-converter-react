@@ -1,4 +1,4 @@
-import { Date } from "./styled";
+import { Field } from "./styled";
 import { useCurrentDate } from "./useCurrentDate";
 
 const formatDate = (currentDate) =>
@@ -20,11 +20,11 @@ const Time = () => {
     const currentDate = useCurrentDate();
 
     return (
-        <Date>
+        <Field>
             Dzisiaj jest
             {" "}
             {formatDate(currentDate)}
-        </Date>
+        </Field>
     )
 };
 

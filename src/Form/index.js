@@ -1,7 +1,7 @@
 import Result from "../Result";
 import Time from "../Time";
 import { currencies } from "../currencies";
-import { Area, Fieldset, Legend, Data, Label, Text, Input, Button } from "./styled";
+import { StyledForm, Fieldset, Legend, Data, Label, Text, Input, Button } from "./styled";
 import { useState } from "react";
 
 const Form = ({ calculateResult, result, legendText, buttonText }) => {
@@ -15,8 +15,7 @@ const Form = ({ calculateResult, result, legendText, buttonText }) => {
 
     return (
         <main>
-            <Area
-                onSubmit={onFormSubmit}>
+            <StyledForm onSubmit={onFormSubmit}>
                 <Fieldset>
                     <Legend>
                         {legendText}
@@ -62,7 +61,7 @@ const Form = ({ calculateResult, result, legendText, buttonText }) => {
                     </p>
                     <Result result={result} />
                 </Fieldset>
-            </Area>
+            </StyledForm>
         </main>
     )
 };

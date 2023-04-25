@@ -1,7 +1,7 @@
-import { Recalculation } from "./styled";
+import { StyledResult } from "./styled";
 
 const Result = ({ result }) => (
-    <Recalculation>
+    <StyledResult>
         {!!result && (
             <>
                 {result.currencyIn.toFixed(2)}&nbsp;PLN&nbsp;=
@@ -9,7 +9,7 @@ const Result = ({ result }) => (
                 <strong>{result.currencyOut.toFixed(2)}&nbsp;{result.currency}</strong>
             </>
         )}
-    </Recalculation>
+    </StyledResult>
 );
 
 export default Result;
