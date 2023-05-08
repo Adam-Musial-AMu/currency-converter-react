@@ -5,6 +5,6 @@ export const theme = {
         teal: "#008080",
         aliceBlue: "#f0f8ff",
         darkGreen: "#013220",
-        axolotl: "#466d46",  
+        axolotl: "#466d46",
     }
 };
