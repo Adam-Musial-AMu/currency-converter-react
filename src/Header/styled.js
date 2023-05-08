@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const Title = styled.h1`
-    color: teal;
+    color: ${({theme}) => theme.color.teal};
     text-align: center;
-    background-color: aliceblue;
-    box-shadow: 5px 5px 10px 0px hsl(120, 22%, 35%);
-    border: 2px solid teal;
+    background-color: ${({theme}) => theme.color.aliceBlue};
+    box-shadow: 5px 5px 10px 0px ${({theme}) => theme.color.axolotl};
+    border: 2px solid ${({theme}) => theme.color.teal};
     border-radius: 20px;
 `;

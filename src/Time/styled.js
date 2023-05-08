@@ -5,6 +5,6 @@ export const Field = styled.p`
     font-family:  "Courier", monospace;
     font-size: small;
     font-stretch: condensed;
-    color: #555;
+    color: ${({theme}) => theme.color.emperor};
     margin: 0;
 `;

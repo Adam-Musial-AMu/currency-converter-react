@@ -4,12 +4,12 @@ export const StyledFooter = styled.footer`
     text-align: center;
     font-size: 20px;
     font-weight: 700;
-    color: teal;
-    background-color: aliceblue;
+    color: ${({theme}) => theme.color.teal};
+    background-color: ${({theme}) => theme.color.aliceBlue};
     margin: 20px auto;
     border-radius: 20px;
-    box-shadow: 5px 5px 10px 0px hsl(120, 22%, 35%);
-    border: 2px solid teal;
+    box-shadow: 5px 5px 10px 0px ${({theme}) => theme.color.axolotl};
+    border: 2px solid ${({theme}) => theme.color.teal};
 `;
 
 export const Paragraph = styled.p`
