@@ -1,3 +1,5 @@
+import CurrencyDate from "../CurrencyDate";
+import CurrencySelect from "../CurrencySelect";
 import Result from "../Result";
 import Time from "../Time";
 import { currencies } from "../currencies";
@@ -41,7 +43,8 @@ const Form = ({ calculateResult, result, legendText, buttonText }) => {
                             <Text>
                                 Waluta*
                             </Text>
-                            <Input as="select"
+                            <CurrencySelect setCurrency = {setCurrency}/>
+                           {/* <Input as="select"
                                 value={currency}
                                 onChange={({ target }) => setCurrency(target.value)}>
                                 {currencies.map((currency) => (
@@ -51,7 +54,7 @@ const Form = ({ calculateResult, result, legendText, buttonText }) => {
                                         {currency.name}
                                     </option>
                                 ))}
-                            </Input>
+                                </Input> */}
                         </Label>
                     </Data>
                     <p>
@@ -59,6 +62,7 @@ const Form = ({ calculateResult, result, legendText, buttonText }) => {
                             {buttonText}
                         </Button>
                     </p>
+                    <CurrencyDate />
                     <Result result={result} />
                 </Fieldset>
             </StyledForm>
