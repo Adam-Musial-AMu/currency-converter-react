@@ -2,22 +2,26 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Form from "./Form";
 import { useState } from "react";
-import { currencies } from "./currencies";
+import { useCurrencyRates } from "./useCurrencyRates";
 
 function App() {
     const [result, setResult] = useState(null);
+    const { currencyOptions } = useCurrencyRates();
 
-    const calculateResult = (currency, amount) => {
-        const rate = currencies.find(({ symbol }) => symbol === currency).rate
-
+    const calculateResult = (amount, currency) => {
+        
+        const rate = currencyOptions.find(( symbol ) => symbol === currency).rate   
+       
         setResult(
             {
                 currencyIn: +amount,
                 currencyOut: amount / rate,
                 currency,
             }
-        )
-    }
+        );
+        
+    
+};
 
     return (
         <>
