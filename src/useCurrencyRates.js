@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export const useCurrencyRates = () => {
-    const [currencyRates, setCurrencyRates] = useState(null);
+    const [currencyData, setCurrencyData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [date, setDate] = useState(null);
@@ -11,8 +11,9 @@ export const useCurrencyRates = () => {
             try {
                 const response = await fetch("https://api.exchangerate.host/latest?base=PLN");
                 const data = await response.json();
-                setCurrencyRates(data.rates);
+                setCurrencyData(data);
                 setDate(data.date);
+                console.log(data.date);
                 setLoading(false);
             }
             catch (error) {
@@ -25,9 +26,9 @@ export const useCurrencyRates = () => {
 
     }, []);
 
-    const currencyOptions = currencyRates ? Object.keys(currencyRates) : [];
+    const currencyOptions = currencyData ? Object.keys(currencyData.rates) : [];
 
-    return { currencyRates, currencyOptions, loading, error, date };
+    return { currencyData, currencyOptions, loading, error, date };
 
 
 }
