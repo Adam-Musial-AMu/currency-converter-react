@@ -13,6 +13,7 @@ const CurrencySelect = ({ currencyOptions, currencyData, setCurrency }) => {
 
   return (
     <StyledCurrencySelect onChange={handleChangeCurrency}>
+      <option value="">Wybierz walutę</option>
       {currencyOptions.map((currency) => (
         <option key={currency} value={currency}>
           {currency}
