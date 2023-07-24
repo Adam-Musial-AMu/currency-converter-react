@@ -1,31 +1,28 @@
-import { useCurrencyRates } from '../useCurrencyRates';
+import { StyledCurrencySelect } from './styled';
 
-const CurrencySelect = ({setCurrency}) => {
-    const { currencyOptions, loading, error } = useCurrencyRates();
+const CurrencySelect = ({ currencyOptions, currencyData, setCurrency }) => {
+  if (!currencyOptions || currencyOptions.length === 0) {
+    return <p>Chwileczkę... ładujemy...</p>;
+  }
 
-    if (loading) {
-        return <p>Chwileczkę... ładujemy...</p>;
-    }
+  const handleChangeCurrency = (event) => {
+    const selectedCurrency = event.target.value;
+    const currencyRate = currencyData.rates[selectedCurrency];
+    setCurrency({ symbol: selectedCurrency, rate: currencyRate });
+  };
 
-    if (error) {
-        return <p>Coś poszło nie tak...</p>;
-    }
+  return (
+    <StyledCurrencySelect onChange={handleChangeCurrency}>
+      {currencyOptions.map((currency) => (
+        <option key={currency} value={currency}>
+          {currency}
+        </option>
+      ))}
+    </StyledCurrencySelect>
+  );
+}
 
 
-    return (
-        
-            <select>
-                {currencyOptions.map((currency) => (
-                    <option 
-                    key={currency} 
-                    value={currency}
-                    onChange={({ target }) => setCurrency(target.value)}>
-                        {currency}
-                    </option>
-                ))}
-            </select>
-        
-    );
-};
+
 
 export default CurrencySelect;
