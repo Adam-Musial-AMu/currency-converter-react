@@ -1,7 +1,6 @@
-import { useCurrencyRates } from "../useCurrencyRates";
 
-const CurrencyDate = () => {
-    const { date } = useCurrencyRates();
+const CurrencyDate = ({ date }) => {
+    console.log(date);
 
     return (
         <p>
