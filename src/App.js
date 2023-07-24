@@ -6,22 +6,22 @@ import { useCurrencyRates } from "./useCurrencyRates";
 
 function App() {
     const [result, setResult] = useState(null);
-    const { currencyOptions } = useCurrencyRates();
+    const { currencyOptions, date, currencyData, loading, error } = useCurrencyRates();
+
+
 
     const calculateResult = (amount, currency) => {
-        
-        const rate = currencyOptions.find(( symbol ) => symbol === currency).rate   
-       
+
         setResult(
             {
                 currencyIn: +amount,
-                currencyOut: amount / rate,
-                currency,
+                currencyOut: amount * currency.rate,
+                currency: currency.symbol
             }
         );
-        
-    
-};
+
+
+    };
 
     return (
         <>
@@ -31,6 +31,11 @@ function App() {
                 result={result}
                 legendText="Wpisz kwotę i walutę"
                 buttonText="Przelicz!"
+                currencyOptions={currencyOptions}
+                date={date}
+                currencyData={currencyData}
+                loading={loading}
+                error={error}
             />
             <Footer />
         </>
