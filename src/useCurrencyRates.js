@@ -13,7 +13,6 @@ export const useCurrencyRates = () => {
                 const data = await response.json();
                 setCurrencyData(data);
                 setDate(data.date);
-                console.log(data.date);
                 setLoading(false);
             }
             catch (error) {
