@@ -69,3 +69,16 @@ export const Button = styled.button`
         filter: brightness(120%);
     }
 `;
+
+export const Message = styled.div`
+    border: 2px solid ${({ theme }) => theme.color.teal};
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 2px 2px 4px ${({ theme }) => theme.color.axolotl};
+    background-color: ${({ theme }) => theme.color.aliceBlue};
+    margin: 0 auto;
+    text-align: center;
+    color: teal;
+    max-width: 700px;
+    min-height: 150px;
+`;

@@ -3,9 +3,9 @@ import CurrencyDate from "../CurrencyDate";
 import CurrencySelect from "../CurrencySelect";
 import Result from "../Result";
 import Time from "../Time";
-import { StyledForm, Fieldset, Legend, Data, Label, Text, Input, Button } from "./styled";
+import { StyledForm, Fieldset, Legend, Data, Label, Text, Input, Button, Message } from "./styled";
 
-const Form = ({ calculateResult, result, legendText, buttonText, date, loading, error, currencyData, currencyOptions }) => {
+const Form = ({ calculateResult, result, legendText, buttonText, date, loading, error, currencyData, currencyOptions, isLoadingOrError }) => {
   const [currency, setCurrency] = useState("");
   const [amount, setAmount] = useState("");
 
@@ -15,7 +15,11 @@ const Form = ({ calculateResult, result, legendText, buttonText, date, loading, 
   };
 
   if (loading) {
-    return <p>Chwileczkę... ładujemy...</p>;
+    return (
+      <Message>
+        <Time />
+        <p>Chwileczkę... ładujemy... Za chwilę pobrane zostaną aktualne kursy walut z Europejskiego Banku Centralnego 😀</p>
+      </Message>)
   }
 
   if (error) {
