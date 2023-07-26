@@ -6,5 +6,6 @@ export const Field = styled.p`
     font-size: small;
     font-stretch: condensed;
     color: ${({ theme }) => theme.color.emperor};
-    margin: 0;
+    margin: 20;
+    padding: 20;
 `;
