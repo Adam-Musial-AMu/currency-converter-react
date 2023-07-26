@@ -1,13 +1,14 @@
+import { Date } from "./styled";
 
 const CurrencyDate = ({ date }) => {
     console.log(date);
 
     return (
-        <p>
+        <Date>
             Kursy walut pobierane są z Europejskiego Banku Centralnego.
             <br />
             Aktualne na dzień: {date}.
-        </p>
+        </Date>
     )
 };
 
