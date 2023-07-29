@@ -14,7 +14,7 @@ const Form = ({ calculateResult, result, legendText, buttonText, date, loading, 
     calculateResult(amount, currency);
   };
 
-  if (loading) {
+  if (isLoadingOrError && loading) {
     return (
       <Message>
         <Time />
@@ -22,7 +22,7 @@ const Form = ({ calculateResult, result, legendText, buttonText, date, loading, 
       </Message>)
   }
 
-  if (error) {
+  if (isLoadingOrError && error) {
     return <p>Coś poszło nie tak... Proszę spróbować ponownie później.</p>;
   }
 
