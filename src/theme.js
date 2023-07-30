@@ -6,5 +6,6 @@ export const theme = {
         aliceBlue: "#f0f8ff",
         darkGreen: "#013220",
         axolotl: "#466d46",
+        errorText: "#ed1d2e",
     }
 };

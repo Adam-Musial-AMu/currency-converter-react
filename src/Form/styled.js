@@ -78,7 +78,8 @@ export const Message = styled.div`
     background-color: ${({ theme }) => theme.color.aliceBlue};
     margin: 0 auto;
     text-align: center;
-    color: teal;
+    color: ${({ isError, theme }) => (isError ? theme.color.errorText : theme.color.teal)};
+    font-weight: 700;
     max-width: 700px;
     min-height: 150px;
 `;
