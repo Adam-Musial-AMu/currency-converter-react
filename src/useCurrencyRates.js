@@ -20,12 +20,12 @@ export const useCurrencyRates = () => {
                 setLoading(false);
             }
         };
- 
+
         const timer = setTimeout(() => {
             fetchCurrencyRates();
-          }, 3000);
-      
-          return () => clearTimeout(timer);
+        }, 3000);
+
+        return () => clearTimeout(timer);
 
     }, []);
 
