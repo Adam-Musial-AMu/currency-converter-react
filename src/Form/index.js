@@ -24,15 +24,21 @@ const Form = ({ calculateResult, result, legendText, buttonText, date, loading, 
 
   if (error) {
     return (
-      <Message>
+      <Message isError>
         <Time />
-        <p>Coś poszło nie tak... 🤔 proszę spróbować później...</p>
+        <p>Coś poszło nie tak... 🤔 spróbuj później... ⏰ ewentualnie sprawdź czy masz połączenie z Internetem... 🌐</p>
       </Message>)
   }
 
   if (!currencyData) {
-    return null;
+    return (
+      <Message isError>
+        <Time />
+        <p>Nie można pobrać aktualnych danych o kursach walut... 😞 to nie nasza wina... ❗</p>
+      </Message>
+    );
   }
+  
 
 
   return (
