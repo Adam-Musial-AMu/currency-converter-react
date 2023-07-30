@@ -1,7 +1,6 @@
 import { Date } from "./styled";
 
 const CurrencyDate = ({ date }) => {
-    console.log(date);
 
     return (
         <Date>
