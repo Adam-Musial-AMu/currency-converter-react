@@ -5,7 +5,7 @@ import Result from "../Result";
 import Time from "../Time";
 import { StyledForm, Fieldset, Legend, Data, Label, Text, Input, Button, Message } from "./styled";
 
-const Form = ({ calculateResult, result, legendText, buttonText, date, loading, error, currencyData, currencyOptions, isLoadingOrError }) => {
+const Form = ({ calculateResult, result, legendText, buttonText, date, loading, error, currencyData, currencyOptions }) => {
   const [currency, setCurrency] = useState("");
   const [amount, setAmount] = useState("");
 
@@ -14,7 +14,7 @@ const Form = ({ calculateResult, result, legendText, buttonText, date, loading, 
     calculateResult(amount, currency);
   };
 
-  if (isLoadingOrError && loading) {
+  if (loading) {
     return (
       <Message>
         <Time />
@@ -22,8 +22,12 @@ const Form = ({ calculateResult, result, legendText, buttonText, date, loading, 
       </Message>)
   }
 
-  if (isLoadingOrError && error) {
-    return <p>Coś poszło nie tak... Proszę spróbować ponownie później.</p>;
+  if (error) {
+    return (
+      <Message>
+        <Time />
+        <p>Coś poszło nie tak... 🤔 proszę spróbować później...</p>
+      </Message>)
   }
 
   if (!currencyData) {
