@@ -1,0 +1,1 @@
+export const downloadTime = 3000;

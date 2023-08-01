@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { downloadTime } from "./downloadTime";
 
 export const useCurrencyRates = () => {
     const [currencyData, setCurrencyData] = useState(null);
@@ -23,7 +24,7 @@ export const useCurrencyRates = () => {
 
         const timer = setTimeout(() => {
             fetchCurrencyRates();
-        }, 3000);
+        }, (downloadTime));
 
         return () => clearTimeout(timer);
 
