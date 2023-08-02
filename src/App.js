@@ -6,7 +6,7 @@ import { useCurrencyRates } from "./useCurrencyRates";
 
 function App() {
     const [result, setResult] = useState(null);
-    const { currencyOptions, date, currencyData, loading, error } = useCurrencyRates();
+    const { currencyOptions, date, currencyData, loading, error } = useCurrencyRates("https://api.exchangerate.host/latest?base=PLN");
 
 
     const calculateResult = (amount, currency) => {
