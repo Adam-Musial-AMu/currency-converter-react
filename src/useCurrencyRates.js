@@ -22,11 +22,8 @@ export const useCurrencyRates = (url) => {
             }
         };
 
-        const timer = setTimeout(() => {
-            fetchCurrencyRates();
-        }, (downloadTime));
+        setTimeout(fetchCurrencyRates, downloadTime);
 
-        return () => clearTimeout(timer);
     }, [url]);
 
     const currencyOptions = currencyData ? Object.keys(currencyData.rates) : [];
