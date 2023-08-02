@@ -5,7 +5,7 @@ https://adam-musial-amu.github.io/currency-converter-react/
 ## Interface view
 ![CURRENCY-CONVERTER](interface_view.gif)
 ## Description
-This is simple Currency Converter app. It was created as a practical exercise in a [YouCode](https://www.facebook.com/youcodepl) programming course. This project was created with [Create React App](https://github.com/facebook/create-react-app), as the purpose of the exercise was to practice React JS.
+This is simple Currency Converter app. It was created as a practical exercise in a [YouCode](https://www.facebook.com/youcodepl) programming course. This project was created with [Create React App](https://github.com/facebook/create-react-app), as the purpose of the exercise was to practice React JS. The application downloads current exchange rates from an external API, which allows you to convert amounts expressed in all currencies provided by the API into PLN.
 ## Technologies used
 - HTML
 - CSS
